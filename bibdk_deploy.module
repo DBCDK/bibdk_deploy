@@ -1,0 +1,22 @@
+<?php
+/*
+ * TODO : make shure links are not duplicated (se bibdk_migration)
+ */
+
+
+/**Implements hook_deploy_entity_alter
+ * @param $entity
+ * @param $entity_type
+ */
+function bibdk_deploy_deploy_entity_alter(&$entity, $entity_type){
+  if (empty($entity) || empty($entity_type)) {
+    return;
+  }
+
+  $menu = node_export_get_menu($entity);
+  if (!empty($menu)){
+    $entity->menu = $menu;
+  }
+}
+
+
