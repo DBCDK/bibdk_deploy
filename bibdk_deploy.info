@@ -3,3 +3,13 @@ description = Tools to handle deploy of content
 core = 7.x
 ;version = 7.x-0.1
 package = Bibliotek.dk
+
+dependencies[] = deploy
+dependencies[] = deploy_ui
+dependencies[] = services
+dependencies[] = rest_server
+dependencies[] = uuid
+dependencies[] = entity
+dependencies[] = uuid_services
+dependencies[] = ctools
+dependencies[] = entity_dependency
